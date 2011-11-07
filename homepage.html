@@ -10,15 +10,12 @@
     //		Styles
     //
     ///////////////////////////////////////////////////////////////////////////////////////////////////-->
-<link rel="stylesheet" href="./themes/nivo/default/default.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="./themes/nivo/pascal/pascal.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="./themes/nivo/orman/orman.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="./css/nivo/nivo-slider.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="./css/nivo/style.css" type="text/css" media="screen" />
+<script type="text/javascript" src="scripts/coin/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="scripts/coin/coin-slider.min.js"></script>
+<link rel="stylesheet" href="css/coin/coin-slider-styles.css" type="text/css" />
 </head>
 
 <body>
-<header>
 <h1 id="header"> <a href="http://tutorialzine.com/2010/12/google-christmas-doodle/">这是一个logo</a> </h1>
 <nav>
 	<ul>
@@ -40,15 +37,11 @@
 <div id="content">
 	<div id="mainContent">
 		<div id="imageContent" style="overflow:hidden; width:500px;">
-			<div class="slider-wrapper theme-default">
-				<div class="ribbon"></div>
-				<div id="slider" class="nivoSlider"> 
-					<img src="images/nivo/2.jpg" alt="" /> 
-					<a href="http://dev7studios.com"><img src="images/nivo/3.jpg" alt="" title="This is an example of a caption" /></a> 
-					<img src="images/4.jpg" alt="" /> 
-					<img src="images/nivo/9.jpg" alt="" title="#htmlcaption" /> 
-				</div>
-			</div>
+			<div id='coin-slider'> 
+			<a href="img01_url" target="_blank"> <img src='images/1.jpg' > <span> Description for img01 </span> </a> 
+			 <a href="imgN_url"> <img src='images/2.jpg' > <span> Description for imgN </span> </a>
+			  <a href="imgN_url"> <img src='images/3.jpg' > <span> Description for imgN </span> </a>  
+			 </div>
 		</div>
 	</div>
 	<aside>
@@ -81,13 +74,11 @@
 	</aside>
 </div>
 <script type='text/javascript' src='scripts/myscript.js'></script> 
-<script type="text/javascript" src="scripts/nivo/jquery-1.6.1.min.js"></script> 
-<script type="text/javascript" src="scripts/nivo/jquery.nivo.slider.pack.js"></script> 
 <script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider();
-    });
-    </script> 
+	$(document).ready(function() {
+		$('#coin-slider').coinslider({ width: 800, delay: 5000 });
+	});
+</script>
 <!--
  <footer>
 	        <h2>Making a Beautiful HTML5 Portfolio</h2>
