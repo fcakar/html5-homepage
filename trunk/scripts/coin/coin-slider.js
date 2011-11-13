@@ -259,36 +259,38 @@
 				$.transition(el);
 				$.transitionCall(el);
 			}).mouseover( function(){ $('#cs-navigation-'+el.id).show() });
-		
-			// image buttons
-			$("<div id='cs-buttons-"+el.id+"' class='cs-buttons'></div>").appendTo($('#coin-slider-'+el.id));
-
 			
-			for(k=1;k<images[el.id].length+1;k++){
-				$('#cs-buttons-'+el.id).append("<a href='#' class='cs-button-"+el.id+"' id='cs-button-"+el.id+"-"+k+"'>"+k+"</a>");
-			}
-			
-			$.each($('.cs-button-'+el.id), function(i,item){
-				$(item).click( function(e){
-					$('.cs-button-'+el.id).removeClass('cs-active');
-					$(this).addClass('cs-active');
-					e.preventDefault();
-					$.transition(el,i);
-					$.transitionCall(el);				
-				})
-			});	
-			
-			$('#cs-navigation-'+el.id+' a').mouseout(function(){
-				$('#cs-navigation-'+el.id).hide();
-				params[el.id].pause = false;
-			});						
-
-			$("#cs-buttons-"+el.id).css({
-				'left'			: '50%',
-				'margin-left' 	: -images[el.id].length*15/2-5,
-				'position'		: 'relative'
-				
-			});
+//***************shiyan 11-08-23:40
+//			// image buttons
+//			$("<div id='cs-buttons-"+el.id+"' class='cs-buttons'></div>").appendTo($('#coin-slider-'+el.id));
+//
+//			
+//			for(k=1;k<images[el.id].length+1;k++){
+//				$('#cs-buttons-'+el.id).append("<a href='#' class='cs-button-"+el.id+"' id='cs-button-"+el.id+"-"+k+"'>"+k+"</a>");
+//			}
+//			
+//			$.each($('.cs-button-'+el.id), function(i,item){
+//				$(item).click( function(e){
+//					$('.cs-button-'+el.id).removeClass('cs-active');
+//					$(this).addClass('cs-active');
+//					e.preventDefault();
+//					$.transition(el,i);
+//					$.transitionCall(el);				
+//				})
+//			});	
+//			
+//			$('#cs-navigation-'+el.id+' a').mouseout(function(){
+//				$('#cs-navigation-'+el.id).hide();
+//				params[el.id].pause = false;
+//			});						
+//
+//			$("#cs-buttons-"+el.id).css({
+//				'left'			: '50%',
+//				'margin-left' 	: -images[el.id].length*15/2-5,
+//				'position'		: 'relative'
+//				
+//			});
+//***************shiyan 11-08-23:40 end
 			
 				
 		}

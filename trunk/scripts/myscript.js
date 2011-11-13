@@ -1,15 +1,20 @@
 var mydiv = document.getElementById("imageContent");
+var $mainContent		= $('#mainContent');
+var $imageContent	= $('#coin-slider');
+var $sidebar		= $('#sidebar');
 
 $(function() {
 });
 
 function onDesignProcessClick(){
-	mydiv.style.width = '450px'
-	$('#coin-slider').coinslider({ width: 300, delay: 5000 });
-	
+	$sidebar.animate({width:450});
+	$mainContent.animate({width:300});
+	$imageContent.coinslider({ width: 300, delay: 5000});
+
 };
 function onDesignTeamClick(){
-	mydiv.style.width = '960px'
-	$('#coin-slider').coinslider({ width: 800, delay: 5000 });
+	$sidebar.animate({width:700});
+	$mainContent.animate({width:500});
+	$imageContent.coinslider({ width: 500, delay: 5000});
 	
 };
